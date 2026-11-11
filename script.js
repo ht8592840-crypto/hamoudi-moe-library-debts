@@ -1,9 +1,13 @@
 const translations = {
   ar: {
+    nav_home: 'الرئيسية',
+    nav_about: 'من نحن',
+    nav_services: 'الخدمات',
     nav_apps: 'التطبيقات',
     nav_security: 'الأمان',
     nav_updates: 'التحديثات',
     nav_faq: 'الأسئلة',
+    nav_contact: 'تواصل',
     download_now: 'تحميل التطبيق الآن (APK)',
     browse_apps: 'استعراض التطبيقات',
     hero_badge: 'منصة تطبيقات آمنة ومهيأة للنجاح',
@@ -28,13 +32,22 @@ const translations = {
     install_badge: 'دليل سريع',
     install_title: 'طريقة تثبيت تطبيق APK على هاتف الأندرويد',
     faq_badge: 'الأسئلة الشائعة',
-    faq_title: 'معلومات مهمة للمستخدمين'
+    faq_title: 'معلومات مهمة للمستخدمين',
+    about_title: 'من نحن',
+    services_title: 'الخدمات',
+    contact_title: 'تواصل معنا',
+    premium_brand: 'حمودي مو ابتكار',
+    premium_intro: 'نصنع حلولاً رقمية عملية، آمنة، وسريعة تتماشى مع احتياجات الأعمال ومشاريعك.'
   },
   en: {
+    nav_home: 'Home',
+    nav_about: 'About',
+    nav_services: 'Services',
     nav_apps: 'Apps',
     nav_security: 'Security',
     nav_updates: 'Updates',
     nav_faq: 'FAQ',
+    nav_contact: 'Contact',
     download_now: 'Download App Now (APK)',
     browse_apps: 'Browse Apps',
     hero_badge: 'Secure app platform built for growth',
@@ -59,7 +72,12 @@ const translations = {
     install_badge: 'Quick Guide',
     install_title: 'How to install an APK on Android',
     faq_badge: 'FAQ',
-    faq_title: 'Important information for users'
+    faq_title: 'Important information for users',
+    about_title: 'About Us',
+    services_title: 'Services',
+    contact_title: 'Contact Us',
+    premium_brand: 'Hamoudi Mo Ibtikar',
+    premium_intro: 'We create practical, secure, fast digital solutions that fit your business and personal projects.'
   }
 };
 
