@@ -21,19 +21,26 @@
         <div class="container nav-wrap">
           <a href="#home" class="brand" aria-label="حمودي مو ابتكار">📚 حمودي مو ابتكار</a>
           <nav class="nav" aria-label="التنقل الرئيسي">
-            <a href="#apps">التطبيقات</a>
-            <a href="#security">الأمان</a>
-            <a href="#updates">التحديثات</a>
-            <a href="#faq">الأسئلة</a>
+            <a href="#apps" data-i18n="nav_apps">التطبيقات</a>
+            <a href="#security" data-i18n="nav_security">الأمان</a>
+            <a href="#updates" data-i18n="nav_updates">التحديثات</a>
+            <a href="#faq" data-i18n="nav_faq">الأسئلة</a>
           </nav>
-          <button class="theme-toggle" type="button" aria-label="تبديل وضع اللون">
-            <span class="theme-icon">☀️</span>
-          </button>
+          <div class="nav-actions">
+            <div class="lang-switcher" aria-label="تبديل اللغة">
+              <button class="lang-btn active" type="button" data-lang="ar">AR</button>
+              <button class="lang-btn" type="button" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle" type="button" aria-label="تبديل وضع اللون">
+              <span class="theme-icon">☀️</span>
+            </button>
+          </div>
           <a
             class="button button-primary header-btn"
             href="https://ht8592840-crypto.github.io/hamoudi-moe-library-debts/app-release.apk"
             target="_blank"
             rel="noopener"
+            data-i18n="download_now"
           >
             تحميل التطبيق الآن (APK)
           </a>
@@ -44,9 +51,9 @@
         <section class="hero">
           <div class="container hero-grid">
             <div class="hero-copy">
-              <span class="pill">منصة تطبيقات آمنة ومهيأة للنجاح</span>
-              <h1>ننشئ تطبيقات عملية، موثوقة، وسريعة… وموجهة لتلبية احتياجاتك اليومية.</h1>
-              <p>
+              <span class="pill" data-i18n="hero_badge">منصة تطبيقات آمنة ومهيأة للنجاح</span>
+              <h1 data-i18n="hero_title">ننشئ تطبيقات عملية، موثوقة، وسريعة… وموجهة لتلبية احتياجاتك اليومية.</h1>
+              <p data-i18n="hero_text">
                 موقع حمودي مو ابتكار هو منصة مركزية لعرض تطبيقاتنا، مع تصميم فاخر، أمان عالي، وتحديثات مستمرة لضمان
                 تجربة تحميل موثوقة وآمنة للمستخدمين.
               </p>
@@ -57,16 +64,17 @@
                   href="https://ht8592840-crypto.github.io/hamoudi-moe-library-debts/app-release.apk"
                   target="_blank"
                   rel="noopener"
+                  data-i18n="download_now"
                 >
                   تحميل التطبيق الآن (APK)
                 </a>
-                <a class="button button-secondary large" href="#apps">استعراض التطبيقات</a>
+                <a class="button button-secondary large" href="#apps" data-i18n="browse_apps">استعراض التطبيقات</a>
               </div>
 
               <div class="hero-stats">
-                <div><strong>100%</strong><span>أمان</span></div>
-                <div><strong>Fast</strong><span>أداء سريع</span></div>
-                <div><strong>24/7</strong><span>دعم مستمر</span></div>
+                <div><strong>100%</strong><span data-i18n="stat_security">أمان</span></div>
+                <div><strong>Fast</strong><span data-i18n="stat_speed">أداء سريع</span></div>
+                <div><strong>24/7</strong><span data-i18n="stat_support">دعم مستمر</span></div>
               </div>
             </div>
 
@@ -113,17 +121,17 @@
 
         <section class="trust-strip" id="security">
           <div class="container trust-row">
-            <div class="trust-item"><span>✓</span><p>آمن 100% وخالٍ من الفيروسات</p></div>
-            <div class="trust-item"><span>✓</span><p>حفظ البيانات محلياً بدون خوادم خارجية</p></div>
-            <div class="trust-item"><span>✓</span><p>سريع وخفيف الأداء</p></div>
+            <div class="trust-item"><span>✓</span><p data-i18n="trust_safe">آمن 100% وخالٍ من الفيروسات</p></div>
+            <div class="trust-item"><span>✓</span><p data-i18n="trust_private">حفظ البيانات محلياً بدون خوادم خارجية</p></div>
+            <div class="trust-item"><span>✓</span><p data-i18n="trust_fast">سريع وخفيف الأداء</p></div>
           </div>
         </section>
 
         <section class="apps-section" id="apps">
           <div class="container">
             <div class="section-heading">
-              <span class="section-badge">التطبيقات</span>
-              <h2>منصة متعددة التطبيقات</h2>
+              <span class="section-badge" data-i18n="apps_badge">التطبيقات</span>
+              <h2 data-i18n="apps_title">منصة متعددة التطبيقات</h2>
             </div>
 
             <div class="app-grid" id="appGrid"></div>
@@ -133,21 +141,21 @@
         <section class="updates-section" id="updates">
           <div class="container update-panel">
             <div class="update-copy">
-              <span class="section-badge">نظام التحديثات</span>
-              <h2>فحص الإصدار والتحديثات الآمنة</h2>
+              <span class="section-badge" data-i18n="updates_badge">نظام التحديثات</span>
+              <h2 data-i18n="updates_title">فحص الإصدار والتحديثات الآمنة</h2>
             </div>
 
             <div class="update-card">
               <div class="version-top">
-                <span>الإصدار الحالي</span>
+                <span data-i18n="current_version">الإصدار الحالي</span>
                 <strong id="versionName">1.0.0</strong>
               </div>
               <p id="releaseNotes">الإصدار الأول والحدث من تطبيق دفتر ديون المكتبة</p>
               <div class="update-actions">
-                <a id="updateLink" class="button button-primary small" href="https://ht8592840-crypto.github.io/hamoudi-moe-library-debts/app-release.apk" target="_blank" rel="noopener">تحديث الآن</a>
-                <button id="checkUpdateBtn" class="button button-secondary small" type="button">فحص التحديثات</button>
+                <a id="updateLink" class="button button-primary small" href="https://ht8592840-crypto.github.io/hamoudi-moe-library-debts/app-release.apk" target="_blank" rel="noopener" data-i18n="update_now">تحديث الآن</a>
+                <button id="checkUpdateBtn" class="button button-secondary small" type="button" data-i18n="check_updates">فحص التحديثات</button>
               </div>
-              <div id="updateStatus" class="status status-default">جاري فحص التحديثات...</div>
+              <div id="updateStatus" class="status status-default" data-i18n="checking_updates">جاري فحص التحديثات...</div>
             </div>
           </div>
         </section>
@@ -155,8 +163,8 @@
         <section class="features-section">
           <div class="container">
             <div class="section-heading">
-              <span class="section-badge">الميزات</span>
-              <h2>تصميم متميز يخدم تجربة المستخدم وتحقيق الثقة</h2>
+              <span class="section-badge" data-i18n="features_badge">الميزات</span>
+              <h2 data-i18n="features_title">تصميم متميز يخدم تجربة المستخدم وتحقيق الثقة</h2>
             </div>
 
             <div class="feature-grid">
@@ -187,8 +195,8 @@
         <section class="install-section" id="install">
           <div class="container install-box">
             <div class="section-heading text-start">
-              <span class="section-badge">دليل سريع</span>
-              <h2>طريقة تثبيت تطبيق APK على هاتف الأندرويد</h2>
+              <span class="section-badge" data-i18n="install_badge">دليل سريع</span>
+              <h2 data-i18n="install_title">طريقة تثبيت تطبيق APK على هاتف الأندرويد</h2>
             </div>
 
             <ol class="steps">
@@ -227,8 +235,8 @@
         <section class="faq-section" id="faq">
           <div class="container faq-box">
             <div class="section-heading">
-              <span class="section-badge">الأسئلة الشائعة</span>
-              <h2>معلومات مهمة للمستخدمين</h2>
+              <span class="section-badge" data-i18n="faq_badge">الأسئلة الشائعة</span>
+              <h2 data-i18n="faq_title">معلومات مهمة للمستخدمين</h2>
             </div>
 
             <div class="faq-list">
@@ -256,6 +264,16 @@
         </div>
       </footer>
     </div>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/256749961480?text=%D9%85%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D9%8A%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D9%84%D8%AF%D8%B9%D9%85%20%D9%88%D8%A7%D9%84%D8%86%D8%A7%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%82%D8%8A%20%D9%88%D8%A7%D9%84%D8%8C%D8%81%D9%80%D9%8A%D9%85%20%D9%81%D9%84%D8%85%20%D8%A7%D9%84%D9%85%D9%87%20%D8%A5%D8%B3%D8%AA%D9%81%D8%A7%D8%82%D8%A7%D8%95%D9%8A%20%D8%A7%D9%84%D8%AA%D9%82%D8%A7%D9%82%20%D9%88%D8%A7%D9%84%D8%AF%D8%B9%D9%85%D8%8C%D9%84%20%D8%8A%D9%84%D8%AA%D9%82%D9%8A%20%D8%A7%D9%84%D8%84%D8%B1%D9%89%20%D8%A7%D9%84%D9%86%D8%A7%D8%B1%D8%AF%20%D9%88%D9%84%D8%84%D8%B4%D9%83%D8%8A%D8%8C%20%D9%88%D8%A7%D9%84%D8%8A%D8%8E%D8%89%D8%A9%20%D8%A7%D9%84%D8%95%D8%A7%D8%B1%D8%AA%D8%A9."
+      target="_blank"
+      rel="noopener"
+      aria-label="تواصل عبر واتساب"
+    >
+      WhatsApp
+    </a>
 
     <script src="script.js"></script>
   </body>

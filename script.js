@@ -1,3 +1,68 @@
+const translations = {
+  ar: {
+    nav_apps: 'التطبيقات',
+    nav_security: 'الأمان',
+    nav_updates: 'التحديثات',
+    nav_faq: 'الأسئلة',
+    download_now: 'تحميل التطبيق الآن (APK)',
+    browse_apps: 'استعراض التطبيقات',
+    hero_badge: 'منصة تطبيقات آمنة ومهيأة للنجاح',
+    hero_title: 'ننشئ تطبيقات عملية، موثوقة، وسريعة… وموجهة لتلبية احتياجاتك اليومية.',
+    hero_text: 'موقع حمودي مو ابتكار هو منصة مركزية لعرض تطبيقاتنا، مع تصميم فاخر، أمان عالي، وتحديثات مستمرة لضمان تجربة تحميل موثوقة وآمنة للمستخدمين.',
+    stat_security: 'أمان',
+    stat_speed: 'أداء سريع',
+    stat_support: 'دعم مستمر',
+    trust_safe: 'آمن 100% وخالٍ من الفيروسات',
+    trust_private: 'حفظ البيانات محلياً بدون خوادم خارجية',
+    trust_fast: 'سريع وخفيف الأداء',
+    apps_badge: 'التطبيقات',
+    apps_title: 'منصة متعددة التطبيقات',
+    updates_badge: 'نظام التحديثات',
+    updates_title: 'فحص الإصدار والتحديثات الآمنة',
+    current_version: 'الإصدار الحالي',
+    update_now: 'تحديث الآن',
+    check_updates: 'فحص التحديثات',
+    checking_updates: 'جاري فحص التحديثات...',
+    features_badge: 'الميزات',
+    features_title: 'تصميم متميز يخدم تجربة المستخدم وتحقيق الثقة',
+    install_badge: 'دليل سريع',
+    install_title: 'طريقة تثبيت تطبيق APK على هاتف الأندرويد',
+    faq_badge: 'الأسئلة الشائعة',
+    faq_title: 'معلومات مهمة للمستخدمين'
+  },
+  en: {
+    nav_apps: 'Apps',
+    nav_security: 'Security',
+    nav_updates: 'Updates',
+    nav_faq: 'FAQ',
+    download_now: 'Download App Now (APK)',
+    browse_apps: 'Browse Apps',
+    hero_badge: 'Secure app platform built for growth',
+    hero_title: 'We build practical, reliable, and fast apps that fit your daily needs.',
+    hero_text: 'Hamoudi Mo Ibtikar is a central platform for showcasing our apps with premium design, strong privacy, and continuous updates for a safe download experience.',
+    stat_security: 'Security',
+    stat_speed: 'Fast',
+    stat_support: 'Support',
+    trust_safe: '100% safe and virus-free',
+    trust_private: 'Data stored locally without external servers',
+    trust_fast: 'Fast and lightweight',
+    apps_badge: 'Apps',
+    apps_title: 'Multi-App Platform',
+    updates_badge: 'Update System',
+    updates_title: 'Version Check & Safe Updates',
+    current_version: 'Current Version',
+    update_now: 'Update Now',
+    check_updates: 'Check Updates',
+    checking_updates: 'Checking for updates...',
+    features_badge: 'Features',
+    features_title: 'Premium design that builds trust and user confidence',
+    install_badge: 'Quick Guide',
+    install_title: 'How to install an APK on Android',
+    faq_badge: 'FAQ',
+    faq_title: 'Important information for users'
+  }
+};
+
 const appData = [
   {
     name: 'دفتر ديون المكتبة',
@@ -55,6 +120,45 @@ function renderAppCards() {
       `
     )
     .join('');
+}
+
+function applyTranslations(lang = 'ar') {
+  const dict = translations[lang] || translations.ar;
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.dataset.i18n;
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+}
+
+function detectLanguage() {
+  const saved = localStorage.getItem('appLanguage');
+  if (saved) return saved;
+
+  const navLang = navigator.language || navigator.userLanguage || 'ar';
+  return navLang.toLowerCase().startsWith('en') ? 'en' : 'ar';
+}
+
+function initLanguageSwitcher() {
+  const preferred = detectLanguage();
+  applyTranslations(preferred);
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selected = btn.dataset.lang;
+      localStorage.setItem('appLanguage', selected);
+      applyTranslations(selected);
+    });
+  });
 }
 
 function initTheme() {
@@ -119,4 +223,5 @@ if (updateButton) {
 
 renderAppCards();
 initTheme();
+initLanguageSwitcher();
 checkForUpdates();
